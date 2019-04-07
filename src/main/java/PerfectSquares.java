@@ -11,25 +11,23 @@ class PerfectSquares {
         }
         if(A < 2 || A > 1_000_000_000) {
             throw new IllegalArgumentException("Illegal argument for A. Has to be between 2 and 1_000_000_000 but was " + A);
-
         }
 
         if(B < 2 || B > 1_000_000_000) {
             throw new IllegalArgumentException("Illegal argument for B. Has to be between 2 and 1_000_000_000 but was " + B);
-
         }
-
         return perfectSquare(A, B, 0);
     }
 
+    // fastest solution
     private int perfectSquare(int a, int b, int numberOfSquares){
         int lowestSqrt = (int) ceil(sqrt(a));
-        int heighestSqrt = (int) ceil(sqrt(b));
+        int highestSqrt = (int) ceil(sqrt(b));
 
-        if(lowestSqrt == 2 && heighestSqrt == 2) {
+        if(lowestSqrt == 2 && highestSqrt == 2) {
             return numberOfSquares;
         } else {
-            return perfectSquare(lowestSqrt, heighestSqrt, numberOfSquares + 1);
+            return perfectSquare(lowestSqrt, highestSqrt, numberOfSquares + 1);
         }
     }
 
