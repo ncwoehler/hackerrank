@@ -32,13 +32,6 @@ class NewYearChaos {
         return String.valueOf(numberOfBribes);
     }
 
-    private static boolean hasBribe(int[] q) {
-
-        return false;
-    }
-
-    private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
         minimumBribes(new int[] {2, 4, 1, 3, 7, 5, 6, 8});
     }
