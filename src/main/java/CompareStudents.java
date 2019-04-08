@@ -1,30 +1,31 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Student{
-    private int id;
-    private String fname;
-    private double cgpa;
-    public Student(int id, String fname, double cgpa) {
-        super();
-        this.id = id;
-        this.fname = fname;
-        this.cgpa = cgpa;
-    }
-    public int getId() {
-        return id;
-    }
-    public String getFname() {
-        return fname;
-    }
-    public double getCgpa() {
-        return cgpa;
-    }
-}
-
 //Complete the code
-class SolutionCompareStudents
+class CompareStudents
 {
+
+    static class Student{
+        private int id;
+        private String fname;
+        private double cgpa;
+        public Student(int id, String fname, double cgpa) {
+            super();
+            this.id = id;
+            this.fname = fname;
+            this.cgpa = cgpa;
+        }
+        public int getId() {
+            return id;
+        }
+        public String getFname() {
+            return fname;
+        }
+        public double getCgpa() {
+            return cgpa;
+        }
+    }
+
     public static void main(String[] args){
         List<Student> studentList = new ArrayList<Student>();
         studentList.add(new Student(3, "Akshum", 3.68));
